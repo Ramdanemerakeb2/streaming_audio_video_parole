@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.MusiqueActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/linear1"
+        android:layout_width="365dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/list_playlist"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <org.videolan.libvlc.util.VLCVideoLayout
+            android:id="@+id/videoVlcView"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:background="@color/design_default_color_error"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            app:srcCompat="@drawable/box_infos" />
+
+        <TextView
+            android:id="@+id/titre_playlist"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/box_titre"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="PlayList Vide"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/list_playlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:layout_weight="1"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp">
+
+        </ListView>
+
+    </RelativeLayout>
+
+
+    <ImageButton
+        android:id="@+id/btn_enregistrement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/mic"
+        android:layout_marginTop="20dp"/>
+
+
+
+</LinearLayout>
